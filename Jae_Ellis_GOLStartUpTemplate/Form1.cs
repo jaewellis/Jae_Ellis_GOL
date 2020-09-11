@@ -57,9 +57,9 @@ namespace Jae_Ellis_GOLStartUpTemplate
                 for (int x = 0; x < universe.GetLength(0); x++)
                 {
                     int neighbors = CountNeighbors(universe, x, y);
-                    if (universe[x, y] == true)
+                    if (universe[x, y] == true) // Living cells
                     {
-                        if (neighbors > 2 || neighbors < 3)
+                        if (neighbors < 2 || neighbors > 3) //Less then 2, more then 3 dies
                         {
                             scratchPad[x, y] = false;
                         } else // range 2 or 3
